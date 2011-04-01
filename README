@@ -1,0 +1,16 @@
+= Site Area Tags
+
+Adds a few Radius tags concerning site "sections" or "area's". These are 100% extracted from the Trike Tags extension:
+https://github.com/tricycle/radiant-trike-tags-extension
+
+<r:site_area /> Renders the slug of the top-most parent page which is not the homepage
+<r:site_sub_area /> Renders the second level parent page slug
+
+<r:if_same_site_area />     and
+<r:if_same_site_sub_area /> Render their contents if the local page context is in the same site
+(sub-)area as the global page context
+This is typically used inside another tag (like <pre><code><r:children:each></code></pre>) to add
+conditional mark-up if the child element is in the current site area.
+
+<r:unless_same_site_sub_area /> and
+<r:unless_same_site_sub_area /> are also available
