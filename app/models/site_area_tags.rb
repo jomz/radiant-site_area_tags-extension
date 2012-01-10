@@ -3,7 +3,7 @@ module SiteAreaTags
   
   desc %{
     Renders the slug of the top-most parent page which is not the homepage
-    This functions nicely as a site area (or “section”) name
+    This functions nicely as a site area (or "section") name
 
     *Usage:*
     <pre><code><r:site_area /></code></pre>
@@ -31,7 +31,7 @@ module SiteAreaTags
     conditional mark-up if the child element is in the current site area.
 
     *Usage:*
-    <pre><code><r:if_same_site_area>…</if_same_site_area></code></pre>
+    <pre><code><r:if_same_site_area>...</if_same_site_area></code></pre>
     
     *Example:*
     <pre><code>
@@ -52,7 +52,7 @@ module SiteAreaTags
     conditional mark-up if the child element is not in the current site area.
 
     *Usage:*
-    <pre><code><r:unless_same_site_area>…</unless_same_site_area></code></pre>
+    <pre><code><r:unless_same_site_area>...</unless_same_site_area></code></pre>
   }
   tag 'unless_same_site_area' do |tag|
     tag.expand unless same_site_area?(tag)
@@ -67,7 +67,7 @@ module SiteAreaTags
     the actual page.
 
     *Usage:*
-    <pre><code><r:if_same_site_subarea>…</if_same_site_subarea></code></pre>
+    <pre><code><r:if_same_site_subarea>...</if_same_site_subarea></code></pre>
   }
   tag 'if_same_site_subarea' do |tag|
     tag.expand if same_site_subarea?(tag)
@@ -82,7 +82,7 @@ module SiteAreaTags
     as the actual page.
 
     *Usage:*
-    <pre><code><r:unless_same_site_subarea>…</unless_same_site_subarea></code></pre>
+    <pre><code><r:unless_same_site_subarea>...</unless_same_site_subarea></code></pre>
   }
   tag 'unless_same_site_subarea' do |tag|
     tag.expand unless same_site_subarea?(tag)
